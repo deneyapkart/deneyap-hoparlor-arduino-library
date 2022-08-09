@@ -1,0 +1,52 @@
+#######################################
+# Syntax Coloring Map For Deneyap_Hoparlor
+#######################################
+
+#######################################
+# Library (KEYWORD1)
+#######################################
+
+Deneyap_Hoparlor	KEYWORD1	Deneyap_Hoparlor
+
+####################################
+# Class (KEYWORD1)
+####################################
+Filter_Class	KEYWORD1
+FilterNoise 	KEYWORD1
+PlayListItem	KEYWORD1
+Wav 			KEYWORD1
+EnvelopePart	KEYWORD1
+Envelope 		KEYWORD1
+Wave 			KEYWORD1
+SquareWave		KEYWORD1
+TriangleWave	KEYWORD1
+SawToothWave	KEYWORD1
+SineWave		KEYWORD1
+Instrument_Class 	KEYWORD1
+MusicScore	KEYWORD1
+SequenceItem_Class	KEYWORD1
+Sequence 	KEYWORD1
+Speaker	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+FillBuffer	KEYWORD2
+AddPlayItem	KEYWORD2
+RemoveAllPlayItems	KEYWORD2
+Play	KEYWORD2
+Repeat	KEYWORD2
+SetVolume	KEYWORD2
+Speaker	KEYWORD2
+StopAllSounds	KEYWORD2
+AlreadyPlaying	KEYWORD2
+RemoveFromPlayList	KEYWORD2
+BufferUsage	KEYWORD2
+PrintPlayList	KEYWORD2
+Init	KEYWORD2
+NextByte	KEYWORD2
+DacVolume	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
