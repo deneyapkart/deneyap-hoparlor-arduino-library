@@ -46,9 +46,9 @@ Use the example of "MelodiCalma2" for the other Deneyap development boards.
 |:--- |   :---  | :---|
 |3.3V | Power   |3.3V |      
 |GND  | Ground  | GND | 
-|IN+  |Amplified Speaker Output| DAC |
-|OUT+ |Speaker +| any GPIO pin |
-|OUT- |Speaker -| GND |
+|IN+  |Amplified Speaker Input pin|DAC&GPIO pin|
+|OUT+ |Speaker (+)| any GPIO pin |
+|OUT- |Speaker (-)| GND |
 |SD   |Closed|Digital pin|
 
 ## :bookmark_tabs:License Information

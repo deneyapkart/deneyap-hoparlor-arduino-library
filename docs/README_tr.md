@@ -43,10 +43,10 @@ Diğer Deneyap Geliştirme Kartları için "MelodiCalma2" örneğini kullanın.
 
 |Hoparlör| Fonksiyon| Kart pinleri |
 | :---     | :---   |   :---  |
-|3.3V |3.3V Besleme Gerilimi| 3.3V    |
-|GND  |Toprak|GND      |
-|IN+  |Kuvvetlendirilmiş Hoparlör girişi| DAC |
-|OUT+ |Hoparlör (+)|herhangi bir GPIO pin|
+|3.3V |3.3V Besleme Gerilimi|3.3V|
+|GND  |Toprak|GND|
+|IN+  |Kuvvetlendirilmiş Hoparlör giriş pini| DAC&GPIO pini|
+|OUT+ |Hoparlör (+)|herhangi bir GPIO pini|
 |OUT- |Hoparlör (-)| GND |
 |SD   |Kapatma|Dijital pin|
 
