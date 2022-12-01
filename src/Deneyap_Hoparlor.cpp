@@ -21,14 +21,14 @@ Library includes:
 #include "soc/rtc_io_reg.h"
 
 /*  Every variable that is used in the mainline code and in the onTImer interrupt code
- *	must be declared volatile.
- *	Also, variables used by onTimer must be regular variables and cannot be
- *	the CLASSES,because it is an interrupt routine and accessing variables
+ *  must be declared volatile.
+ *  Also, variables used by onTimer must be regular variables and cannot be
+ *  the CLASSES,because it is an interrupt routine and accessing variables
  *  belonging to objects was causing crashing in the ISR
  *  To avoid re-entrancy problems, the ISR onTimer() must change only the "play" index and the
- *	mainline code must change only the "fill" index.   Otherwise we can get corruption if
- *	onTimer() does a pull while FillBuffer() is putting data in.
- *	Each can _look_ at the other's variables, but both cannot _change_ the same variable.
+ *  mainline code must change only the "fill" index.   Otherwise we can get corruption if
+ *  onTimer() does a pull while FillBuffer() is putting data in.
+ *  Each can _look_ at the other's variables, but both cannot _change_ the same variable.
  */
 
 volatile int32_t NextPlayPos = 0;    // position in buffer of next byte to play

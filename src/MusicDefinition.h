@@ -70,7 +70,7 @@
 #define FNOTE_A5  880
 #define FNOTE_AS5 932
 #define FNOTE_B5  988
-#define FNOTE_C6  1047	
+#define FNOTE_C6  1047 
 #define FNOTE_CS6 1109
 #define FNOTE_D6  1175
 #define FNOTE_DS6 1245
@@ -239,4 +239,3 @@
 #define INSTRUMENT_HARPSICHORD 2
 #define INSTRUMENT_ORGAN 3
 #define INSTRUMENT_SAXOPHONE 4
-

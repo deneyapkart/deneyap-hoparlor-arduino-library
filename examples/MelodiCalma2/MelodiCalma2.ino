@@ -1,115 +1,114 @@
 /*
- *   Melodi çalma 2 örneği,
- *
+ *   MelodiCalma2 örneği,
  *   Daha dün annemizin ninnisinin melodi verilerinin çalsırılması örneği
- *   Notalar -> https://github.com/deneyapkart/deneyapkart-arduino-core/blob/master/libraries/00_Tone/src/pitches.h
- *   
+ *
  *   Hoparlör | Geliştirme Kartı
- *   IN+      | Herhangi bir GPIO pini
- *   3V3      | 3.3V
+ *   IN+      | D0 (herhangi bir GPIO pini)
+ *   3v3      | 3.3V
  *   GND      | GND
  *
  *   Bu örnek Deneyap Hoparlör için oluşturulmuştur
- *      ------>  www.....com  <------ //docs
+ *      ------>  https://docs.deneyapkart.org/tr/content/contentDetail/deneyap-module-deneyap-speaker-m29  <------
  *      ------>  https://github.com/deneyapkart/deneyap-hoparlor-arduino-library  <------
- *
- */
- 
-#include <Tone32.h>
+*/
+#include <Deneyap_Hoparlor.h>   // Deneyap Hoparlör kutuphanesi eklenmesi
 
-#define SpeakerPin A0
+#define SpeakerPin D2
 #define Frequency 500
 
-void setup() {}
+void setup() {
+}
 
+/*  Melodinin nota verileri -> https://github.com/deneyapkart/deneyap-hoparlor-arduino-library/blob/master/src/MusicDefinition.h
+    Bu veriler ile istediğiniz melodileri oluşturabilirsiniz.*/
 void loop() {
-  tone(SpeakerPin, NOTE_C5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_C5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_G5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_G5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_A5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_A5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_G5, Frequency, 0);
-  noTone(SpeakerPin, 0);
+  tone(SpeakerPin, FNOTE_C5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_C5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_G5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_G5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_A5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_A5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_G5, Frequency);
+  noTone(SpeakerPin);
 
-  tone(SpeakerPin, NOTE_F5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_F5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_E5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_E5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_D5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_D5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_C5, Frequency, 0);
-  noTone(SpeakerPin, 0);
+  tone(SpeakerPin, FNOTE_F5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_F5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_E5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_E5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_D5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_D5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_C5, Frequency);
+  noTone(SpeakerPin);
 
-  tone(SpeakerPin, NOTE_G5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_G5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_F5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_F5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_E5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_E5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_D5, Frequency, 0);
-  noTone(SpeakerPin, 0);
+  tone(SpeakerPin, FNOTE_G5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_G5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_F5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_F5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_E5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_E5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_D5, Frequency);
+  noTone(SpeakerPin);
 
-  tone(SpeakerPin, NOTE_G5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_G5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_F5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_F5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_E5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_E5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_D5, Frequency, 0);
-  noTone(SpeakerPin, 0);  
+  tone(SpeakerPin, FNOTE_G5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_G5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_F5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_F5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_E5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_E5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_D5, Frequency);
+  noTone(SpeakerPin);  
 
-  tone(SpeakerPin, NOTE_C5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_C5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_G5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_G5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_A5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_A5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_G5, Frequency, 0);
-  noTone(SpeakerPin, 0);  
+  tone(SpeakerPin, FNOTE_C5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_C5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_G5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_G5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_A5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_A5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_G5, Frequency);
+  noTone(SpeakerPin);  
 
-  tone(SpeakerPin, NOTE_F5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_F5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_E5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_E5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_D5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_D5, Frequency, 0);
-  noTone(SpeakerPin, 0);
-  tone(SpeakerPin, NOTE_C5, Frequency, 0);
-  noTone(SpeakerPin, 0);
+  tone(SpeakerPin, FNOTE_F5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_F5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_E5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_E5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_D5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_D5, Frequency);
+  noTone(SpeakerPin);
+  tone(SpeakerPin, FNOTE_C5, Frequency);
+  noTone(SpeakerPin);
 }

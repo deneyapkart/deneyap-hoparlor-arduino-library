@@ -1,4 +1,4 @@
-# Deneyap Speaker PAM8302A Arduino Library
+# Deneyap Speaker Arduino Library
 [FOR TURKISH VERSION](docs/README_tr.md) ![trflag](https://github.com/deneyapkart/deneyapkart-arduino-core/blob/master/docs/tr.png)
 
 ***** Add photo ****
@@ -9,19 +9,22 @@ Arduino library for Deneyap Speaker PAM8302A
 - `Product ID` **M29**, **mpv1.0**
 - `MCU` PAM8302A
 - `Weight` 
-- `Module Dimension`
+- `Module Dimension` 25,4 mm x 25,4 mm
 
 ## :closed_book:Documentation
-Deneyap Speaker PAM8302A
+[Deneyap Speaker](https://docs.deneyapkart.org/en/content/contentDetail/deneyap-module-deneyap-speaker-m29)
 
-[PAM8302A](https://www.diodes.com/assets/Datasheets/PAM8302A.pdf)
+[Deneyap Speaker Shematic](https://cdn.deneyapkart.org/media/upload/userFormUpload/jK7N10tjlSvpvxTOBJTOzDI4mnhFc8Gt.pdf)
+
+[Deneyap Speaker Mechanical Drawing](https://cdn.deneyapkart.org/media/upload/userFormUpload/oOS8e2k6AIGAZUH9mr5JS5CZf0Xf8JM1.pdf)
+
+[PAM8302A-datasheet](https://www.diodes.com/assets/Datasheets/PAM8302A.pdf)
 
 [How to install a Arduino Library](https://docs.arduino.cc/software/ide-v1/tutorials/installing-libraries)
 
-## :pushpin:Deneyap Speaker PAM8302A
-This Arduino library allows you to use Deneyap Speaker PAM8302A. You can use this library in Deneyap Kart and Deneyap Kart 1A.
-
-Use the example of "MelodiCalma2" for the Deneyap Mini. 
+## :pushpin:Deneyap Speaker
+This Arduino library allows you to use Deneyap Speaker . You can use this library in Deneyap Kart and Deneyap Kart 1A.
+Use the example of "MelodiCalma2" for the other Deneyap development boards. 
 
 ## :globe_with_meridians:Repository Contents
 - `/docs ` README_tr.md and product photos
@@ -31,6 +34,8 @@ Use the example of "MelodiCalma2" for the Deneyap Mini.
 - `library.properties ` General library properties for the Arduino package manager
 
 ## Version History
+1.0.1 - updated sketches
+
 1.0.0 - initial release
 
 ## :rocket:Hardware Connections
@@ -41,12 +46,12 @@ Use the example of "MelodiCalma2" for the Deneyap Mini.
 |:--- |   :---  | :---|
 |3.3V | Power   |3.3V |      
 |GND  | Ground  | GND | 
-|IN+  | Input   | DAC |
-|OUT+ | Input   | any GPIO pin |
-|OUT- | Input   | GND |
-|SD   |    |   |
+|IN+  |Amplified Speaker Output| DAC |
+|OUT+ |Speaker +| any GPIO pin |
+|OUT- |Speaker -| GND |
+|SD   |Closed|Digital pin|
 
 ## :bookmark_tabs:License Information
-Please review the [LICENSE](https://github.com/deneyapkart/deneyap-hoparlor-arduino-library/blob/master/LICENSE) file for license information.
-
 Based on XT_DAC_Audio Arduino Library. Changed to work with Deneyap Speaker PAM8302A.
+
+Please review the [LICENSE](https://github.com/deneyapkart/deneyap-hoparlor-arduino-library/blob/master/LICENSE) file for license information.

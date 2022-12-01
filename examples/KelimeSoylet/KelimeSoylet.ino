@@ -1,29 +1,23 @@
 /*
- *   Türkçe Kelimeleri Söyletme örneği,
+ *   KelimeSoylet örneği,
  *
- *   Bu örnekte temel konfigürasyon ayarları yapılmaktadır.
- *   Seri terminale rakama göre karşılık gelen kelimeyi Deneyap Hoparlör ile çaldırmaktadır.
+ *   Seri port ekranına yazılan rakama karşılık gelen Türkçe kelimeleri Deneyap Hoparlör ile çaldırmaktadır.
  *   
- *   Bu örnek DENEYAP MİNİ kartını deteklememektedir.
+ *   Bu örnek yalnızca Deneyap Kart ve Deneyap Kart 1A'yı kartını desteklemektedir.
  *
  *   Hoparlör | Geliştirme Kartı
  *   IN+      | DAC1
  *   3V3      | 3.3V
  *   GND      | GND
  *   
- *
  *   Bu örnek Deneyap Hoparlör için oluşturulmuştur
- *      ------>  www.....com  <------ //docs
+ *      ------>  https://docs.deneyapkart.org/tr/content/contentDetail/deneyap-module-deneyap-speaker-m29  <------
  *      ------>  https://github.com/deneyapkart/deneyap-hoparlor-arduino-library  <------
- *
- */
-
-#include <Deneyap_Hoparlor.h>                     // Deneyap_Hoparlor kutuphanesi eklenmesi
-
-/*.wav dosyası nasıl hex dönüşür: https://github.com/deneyapkart/deneyap-hoparlor-arduino-library/tree/master/examples/KelimeSoylet */ 
+*/
+#include <Deneyap_Hoparlor.h>                     // Deneyap Hoparlör kutuphanesi eklenmesi
 #include "SoundData.h"                            // Hex dönüştürülmüş .wav dosyasının eklenmesi
 
-Speaker Speaker(25, 0);                           // Speaker için class tanımlaması. DAC1(GPIO 25) pini ve timer seçimi
+Speaker Speaker(DAC1, 0);                         // Speaker için class tanımlaması. (DAC1, 0): DAC pini ve timer seçimi
 Sequence Sequence;
 
 /* Kelime ses verileri */
@@ -45,7 +39,7 @@ void setup() {
 void loop() {
     Speaker.FillBuffer();                         // Ses arabelleğini verilerle doldurulması
 
-    if (Serial.available())                       // Seri terminale yazılan Kelimeın girilmesi
+    if (Serial.available())
         PlayWords(Serial.readString().c_str());
 }
 

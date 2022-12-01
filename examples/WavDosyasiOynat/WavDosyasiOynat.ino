@@ -2,34 +2,31 @@
 // "Araclar->Partition Scheme->Huge APP" secilmeli //
 // "Tools->Partition Scheme->Huge APP" secilmeli //
 /*
- *   Hexa dönüştürülmüş .wav dosyasının oynatılması örneği,
+ *   WavDosyasiOynat örneği,
  *
  *   Dönüştürülmüş .wav dosyası oynatılmaktadır. 
  *   
- *   DENEYAP MİNİ kartını desteklememektedir.
+ *   Bu örnek yalnızca Deneyap Kart ve Deneyap Kart 1A'yı kartını desteklemektedir.
  *
  *   Hoparlör | Geliştirme Kartı
  *   IN+      | DAC1
  *   3V3      | 3.3V
  *   GND      | GND
- *
+ *   
  *   Bu örnek Deneyap Hoparlör için oluşturulmuştur
- *      ------>  www.....com  <------ //docs
+ *      ------>  https://docs.deneyapkart.org/tr/content/contentDetail/deneyap-module-deneyap-speaker-m29  <------
  *      ------>  https://github.com/deneyapkart/deneyap-hoparlor-arduino-library  <------
- *
 */
-
-#include <Deneyap_Hoparlor.h>                                         // Deneyap_Hoparlor kutuphanesi eklenmesi
+#include <Deneyap_Hoparlor.h>                                         // Deneyap Hoparlör kutuphanesi eklenmesi
 #include "SoundData.h"                                                // Dönüştürülmüş .wav dosyasının eklenmesi
 
-Speaker Speaker(25,0);                                                // Speaker için class tanımlaması. DAC1(GPIO 25) pini ve timer seçimi
+Speaker Speaker(DAC1, 0);                                             // Speaker için class tanımlaması. (DAC1, 0): DAC pini ve timer seçimi
 
-/*.wav dosyası nasıl hex dönüşür: https://github.com/deneyapkart/deneyap-hoparlor-arduino-library/tree/master/examples/KelimeSoylet */ 
 Wav StarWars(StarWarsWav);                                            //  Wav türünde dönüştürülen sample verisi
 
 void setup() {
   StarWars.RepeatForever=false;                                       // Sample sonsuz oynatılması
-  Speaker.Play(&StarWars);                                            // Oynatmak için ayarlanması
+  Speaker.Play(&StarWars);                                            // Oynatılan dosyanın yazılması
 }
 
 
