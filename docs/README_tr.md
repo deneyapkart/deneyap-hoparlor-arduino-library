@@ -2,7 +2,7 @@
 
 ***** Fotoğraf eklenecek ****
 
-Deneyap Hoparlör PAM8302A için Arduino kütüphanesidir.
+Deneyap Hoparlör için Arduino kütüphanesidir.
 
 ## :mag_right:Özellikler 
 - `Ürün ID` **M29**, **mpv1.0**
@@ -33,6 +33,8 @@ Diğer Deneyap Geliştirme Kartları için "MelodiCalma2" örneğini kullanın.
 - `library.properties` Arduino yöneticisi için genel kütüphane özellikleri
 
 ## Sürüm Geçmişi
+1.0.2 - hata giderildi
+
 1.0.1 - Örnek uygulama güncellendi
 
 1.0.0 - ilk sürüm
@@ -43,10 +45,10 @@ Diğer Deneyap Geliştirme Kartları için "MelodiCalma2" örneğini kullanın.
 
 |Hoparlör| Fonksiyon| Kart pinleri |
 | :---     | :---   |   :---  |
-|3.3V |3.3V Besleme Gerilimi|3.3V|
-|GND  |Toprak|GND|
-|IN+  |Kuvvetlendirilmiş Hoparlör giriş pini| DAC&GPIO pini|
-|OUT+ |Hoparlör (+)|herhangi bir GPIO pini|
+|3.3V |3.3V Besleme Gerilimi| 3.3V    |
+|GND  |Toprak|GND      |
+|IN+  |Kuvvetlendirilmiş Hoparlör girişi| DAC |
+|OUT+ |Hoparlör (+)|herhangi bir GPIO pin|
 |OUT- |Hoparlör (-)| GND |
 |SD   |Kapatma|Dijital pin|
 

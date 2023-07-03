@@ -3,7 +3,7 @@
 
 ***** Add photo ****
 
-Arduino library for Deneyap Speaker PAM8302A
+Arduino library for Deneyap Speaker
 
 ## :mag_right:Specifications 
 - `Product ID` **M29**, **mpv1.0**
@@ -34,6 +34,8 @@ Use the example of "MelodiCalma2" for the other Deneyap development boards.
 - `library.properties ` General library properties for the Arduino package manager
 
 ## Version History
+1.0.2 - fixed bug
+
 1.0.1 - updated sketches
 
 1.0.0 - initial release
@@ -46,12 +48,12 @@ Use the example of "MelodiCalma2" for the other Deneyap development boards.
 |:--- |   :---  | :---|
 |3.3V | Power   |3.3V |      
 |GND  | Ground  | GND | 
-|IN+  |Amplified Speaker Input pin|DAC&GPIO pin|
-|OUT+ |Speaker (+)| any GPIO pin |
-|OUT- |Speaker (-)| GND |
+|IN+  |Amplified Speaker Output| DAC |
+|OUT+ |Speaker +| any GPIO pin |
+|OUT- |Speaker -| GND |
 |SD   |Closed|Digital pin|
 
 ## :bookmark_tabs:License Information
-Based on XT_DAC_Audio Arduino Library. Changed to work with Deneyap Speaker PAM8302A.
+Based on XT_DAC_Audio Arduino Library. Changed to work with Deneyap Speaker.
 
 Please review the [LICENSE](https://github.com/deneyapkart/deneyap-hoparlor-arduino-library/blob/master/LICENSE) file for license information.
