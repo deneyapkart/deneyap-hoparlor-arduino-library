@@ -2,8 +2,8 @@
 *****************************************************************************
 @file         Deneyap_Hoparlor.h
 @mainpage     Deneyap Speaker Arduino library header file
-@version      v1.0.2
-@date         July 03, 2023
+@version      v2.0.1
+@date         July, 2025
 @brief        This file contains all function prototypes and macros
               for Deneyap Speaker Arduino library
 *****************************************************************************
