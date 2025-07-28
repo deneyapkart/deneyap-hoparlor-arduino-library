@@ -2,9 +2,8 @@
 *****************************************************************************
 @file         Deneyap_Hoparlor.cpp
 @mainpage     Deneyap Speaker Arduino library source file
-@maintainer   RFtek Electronics <techsupport@rftek.com.tr>
-@version      v1.0.2
-@date         July 03, 2023
+@version      v2.0.1
+@date         July, 2025
 @brief        Includes functions to control Deneyap Speaker 
               Arduino library
               
@@ -13,6 +12,10 @@ Library includes:
 --> Data manipulation functions
 *****************************************************************************
 */
+
+#ifndef CORE_DK_VERSION
+  #define CORE_DK_VERSION 0    // fallback
+#endif
 
 #include "esp32-hal-timer.h"
 #include "Deneyap_Hoparlor.h"
@@ -278,11 +281,19 @@ Speaker::Speaker(uint8_t TheDacPin, uint8_t TimerNo, uint16_t PassedBufferSize) 
                                    // angles of 0 - 255 "DAC Degrees". Speeds things up to if
                                    // you pre-calculate
   // Set up interrupt routine
+#if CORE_DK_VERSION <= 103013
   timer = timerBegin(TimerNo, 80, true);        // use timer TimerNo, pre-scaler is 80 (divide by 8000), count up
   timerAttachInterrupt(timer, &onTimer, true);  // P3= edge triggered
   timerAlarmWrite(timer, 20, true);             // will trigger 250,000 times per second,
   timerAlarmEnable(timer);                      // enable
   delay(1);                                     // Allow system to settle, otherwise garbage can play for first second
+  #else
+  // 1 MHz sayaç frekansı (80 MHz / prescaler 80)
+  timer = timerBegin(1000000);
+  timerAttachInterrupt(timer, onTimer);
+  timerAlarm(timer, 20, true, 0);
+  delay(1);                                     // Allow system to settle, otherwise garbage can play for first second
+  #endif
 }
 
 void Speaker::PrintPlayList() {
